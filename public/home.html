@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400, 700|Poppins:400, 700, 800, 900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="grey lighten-3">
+    <!-- NAVBAR -->
+    <nav class="z-depth-0 grey lighten-4">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo">
+          <img src="img/Logo.png">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="logged-in">
+              <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+            </li>
+            <li class="logged-in admin" id="hidden" style="display: none;">
+                <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+            </li>
+            <li class="logged-in">
+                <a href="#" class="grey-text" id="logout">Logout</a>
+            </li>
+          </span>
+        </ul>
+      </div>
+    </nav>
+  
+    <!-- ADMIN ACTIONS -->
+    <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display: none;">
+      <input type="email" placeholder="User email" id="admin-email" required />
+      <button class="btn z-depth-0">Change</button>
+    </form>
+  
+    <!-- ACCOUNT MODAL -->
+    <div id="modal-account" class="modal">
+      <div class="modal-content center-align">
+        <h4>Account details</h4><br />
+        <div class="account-details">
+
+        </div>
+      </div>
+    </div>
+  
+    <!-- CREATE GUIDE MODAL -->
+    <div id="modal-create" class="modal">
+      <div class="modal-content">
+        <h4>Create Guide</h4><br />
+        <form id="create-form">
+          <div class="input-field">
+            <input type="text" id="title" required>
+            <label for="title">Guide Title</label>
+          </div>
+          <div class="input-field">
+            <textarea id="content" class="materialize-textarea" required></textarea>
+            <label for="content">Guide Content</label>
+          </div>
+          <button class="btn z-depth-0">Create</button>
+          <p class="error"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- GUIDE LIST -->
+    <div class="container">
+        <ul class="collapsible z-depth-0 guides">
+
+        </ul>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-functions.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBCarzLcgK0H7tBx5vbi-Z05UUpwTOgBpI",
+            authDomain: "edu-mentor.firebaseapp.com",
+            databaseURL: "https://edu-mentor.firebaseio.com",
+            projectId: "edu-mentor",
+            storageBucket: "edu-mentor.appspot.com",
+            messagingSenderId: "118635186918",
+            appId: "1:118635186918:web:dabbe0f7012a2740c64927",
+            measurementId: "G-554XQRFVBY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        const functions = firebase.functions();
+          
+        // update firestore settings
+        //db.settings({ timestampsInSnapshots: true });  
+
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+* {
+    border: 0;
+    outline: 0;
+    user-select: none;
+}
+
+img {
+    width: 40px; 
+    height: 40px; 
+    margin-top: 12px;
+}
+
+/* .admin {
+    margin: 40px auto;
+    max-width: 300px;
+    display: none;
+} */
+
+.grey-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #554d89;
+}
+
+.container ul {
+    border: none;
+}
+.collapsible {
+    margin-top: 80px;
+}
+.btn {
+    margin: 30px 0;
+    background: linear-gradient(9.28deg, #6852ED 16.67%, #BA43FC 100%);
+    color: #f1f1f1;
+    letter-spacing: .5px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn:hover {
+    color: #6852ED;
+    border: 1px solid #6852ED;
+    background: #ffffff;
+}

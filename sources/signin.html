@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in page</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400, 700|Poppins:400, 700, 800, 900&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41a8dd7285.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/signin.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left-side">
+            <img src="img/login.jpg" alt="">
+        </div>
+        <div class="right-side">
+            <hr><hr>
+            <h1>Sign in</h1>
+            <div id="modal-login" class="modal">
+                  <form id="login-form">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="email" id="login-email" placeholder="Enter your user name" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-key"></i>
+                        <input type="password" id="login-password" placeholder="Enter your user password" required />
+                    </div>
+                    <button class="btn yellow darken-2 z-depth-0">Sign in</button>
+                    <p class="error"></p>
+                  </form>
+              </div>
+            <p>Or login with</p>
+            <i class="fab fa-google"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <div class="link">
+                <a href="signup.html">Sign up</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBCarzLcgK0H7tBx5vbi-Z05UUpwTOgBpI",
+            authDomain: "edu-mentor.firebaseapp.com",
+            databaseURL: "https://edu-mentor.firebaseio.com",
+            projectId: "edu-mentor",
+            storageBucket: "edu-mentor.appspot.com",
+            messagingSenderId: "118635186918",
+            appId: "1:118635186918:web:dabbe0f7012a2740c64927",
+            measurementId: "G-554XQRFVBY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // update firestore settings
+        //db.settings({ timestampsInSnapshots: true });  
+
+    </script>
+
+        
+    <script src="js/modal.js"></script>
+
+</body>
+</html>
