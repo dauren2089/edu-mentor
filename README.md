@@ -1,5 +1,5 @@
 # edu-mentor
-Edu-Mentor is a small project where we tried to connect simple landing page with Firebase Hosting, Authentication, Firestore and Firebase Functions.
+Edu-Mentor is a small project where I tried to connect simple landing page with Firebase Hosting, Authentication, Firestore and Firebase Functions.
 
    
 ## Built With
